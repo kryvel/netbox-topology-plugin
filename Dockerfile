@@ -10,4 +10,4 @@ COPY ./setup.py /source/nextbox-ui-plugin/
 COPY ./MANIFEST.in /source/nextbox-ui-plugin/
 COPY ./README.md /source/nextbox-ui-plugin/
 COPY --chown=100:101 ./nextbox_ui_plugin/static/nextbox_ui_plugin /opt/netbox/netbox/static/nextbox_ui_plugin
-RUN pip3 install --no-cache-dir nextbox-ui-plugin
+RUN /opt/netbox/venv/bin/pip install  --no-warn-script-location --no-cache-dir nextbox-ui-plugin
